@@ -35,6 +35,6 @@ uc.setInstalledSonarVersion(sqVersion)
 uc.findAllCompatiblePlugins().each {
   if (plugins.contains(it.name)) {
     println "Downloading ${it.name}"
-    download(it.getLastCompatible(sqVersion).downloadUrl, "./plugins/" + it.name + ".jar")
+    download(it.getLastCompatible(sqVersion).downloadUrl, "./sonarqube/plugins/" + it.name + ".jar")
   }
 }
