@@ -11,6 +11,8 @@ RUN curl -sLo sonarqube-${SQ_VERSION}.zip http://dist.sonar.codehaus.org/sonarqu
     unzip sonarqube-${SQ_VERSION}.zip -d /tmp && \
     mv /tmp/sonarqube-${SQ_VERSION} /opt/sonarqube
 
+RUN env
+RUN sed -i "s@#sonar\.jdbc\.url=jdbc:postgresql://localhost/sonar@sonar\.jdbc\.url=jdbc:postgresql://\${env:POSTGRES_1_PORT_5432_TCP_ADDR}/sonar@" /opt/sonarqube/conf/sonar.properties
 EXPOSE 9000
 
 ADD start /start

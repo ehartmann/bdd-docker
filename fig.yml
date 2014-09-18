@@ -1,0 +1,13 @@
+sonarqube:
+  build: sonarqube
+  links:
+    - postgres
+  ports:
+    - "9000:9000"
+  volumes:
+    - /tmp/sonarqube_log/:/opt/sonarqube/logs
+
+postgres:
+  build: postgres
+  ports:
+    - "5432:5432"  
