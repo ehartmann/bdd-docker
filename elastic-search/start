@@ -1,2 +1,2 @@
 #!/bin/sh
-java -jar /opt/sonarqube/lib/sonar-application-${SQ_VERSION}.jar -Dsonar.issues.use_es_backend=true -Dsonar.cluster.master=${SONARQUBE_1_PORT_9001_TCP_ADDR}:9001
+java -jar /opt/sonarqube/lib/sonar-application-${SQ_VERSION}.jar -Dsonar.cluster.master=${SONARQUBE_1_PORT_9001_TCP_ADDR}:9001

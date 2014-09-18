@@ -1,2 +1,2 @@
 #!/bin/sh
-java -jar /opt/sonarqube/lib/sonar-application-${SQ_VERSION}.jar -Dsonar.issues.use_es_backend=true
+java -jar /opt/sonarqube/lib/sonar-application-${SQ_VERSION}.jar 
