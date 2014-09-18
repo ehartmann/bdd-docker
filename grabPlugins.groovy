@@ -3,9 +3,6 @@
 import org.sonar.updatecenter.common.UpdateCenterDeserializer
 import org.sonar.updatecenter.common.Version
 
-def plugins = ["Flex", "Views", "JavaScript"]
-def sqVersion = "4.5-RC2"
-
 def download(address, filename) {
   if (filename == null) {
     filename = address.tokenize("/")[-1]
